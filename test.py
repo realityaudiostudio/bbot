@@ -9,12 +9,9 @@ SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 GENAI_API_KEY = os.getenv("GENAI_API_KEY")
 # Supabase credentials
-# SUPABASE_URL = "https://klwbglknjadrgzrabckg.supabase.co"
-# SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtsd2JnbGtuamFkcmd6cmFiY2tnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDgxOTAxMjQsImV4cCI6MjA2Mzc2NjEyNH0.C84YObxDdxHMq32WHpTkCDpMXc_fFaNE1A-td4BCymU"
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 # Google Gemini setup
-# GENAI_API_KEY = "AIzaSyA9b9YZBLkxBOhRd1wDahGYbZkUI4YU9Qk"
 genai.configure(api_key=GENAI_API_KEY)
 
 # Streamlit config
