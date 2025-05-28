@@ -108,10 +108,14 @@ if st.button("Generate Brief"):
             inputs.append(case_text)
 
         # Add evaluation instructions
+        # Custom evaluation based on Supabase question
         evaluation_prompt = (
-            "Based on the provided answer and the given question, evaluate the response for relevance, clarity, "
-            "and correctness. Provide a score in the format 'Score: X/10' followed by a short reasoning."
-        )
+            f"The question is: \"{question_text}\"\n"
+            "Evaluate the provided input (image or text) based on whether it answers the question appropriately. "
+            "Consider relevance, correctness, and clarity. "
+            "Give a score in the format 'Score: X/10' and explain briefly why."
+                        )
+
         inputs.append(evaluation_prompt)
 
         try:
